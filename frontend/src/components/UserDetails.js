@@ -1,10 +1,9 @@
 import React from 'react'
 
-export const About = () => {
-    
+export const UserDetails = () => {
     return (
         <div>
-            This is about page
+            This is User details
         </div>
     )
 }

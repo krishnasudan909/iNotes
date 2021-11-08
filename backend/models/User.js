@@ -3,14 +3,22 @@ const { Schema } = mongoose;
 
 //Creating a schema for the user
 const UserSchema = new Schema({
-    name: {
+    fName: {
         type: String,
         required: true
+    },
+    lName: {
+        type: String
     },
     email: {
         type: String,
         required: true,
         unique: true
+    },
+    phoneNo:{
+        type: Number,
+        required:true,
+        unique:true
     },
     password: {
         type: String,
