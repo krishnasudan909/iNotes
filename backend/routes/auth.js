@@ -26,12 +26,12 @@ router.post('/createuser', [
     }
     try {
         // check whether the user with this email exist already
-        let user = await User.findOne({ email: req.body.email });
-        if (user) {
+        let userEmail = await User.findOne({ email: req.body.email });
+        if (userEmail) {
             return res.status(400).json({ success, error: "Sorry a user with this email already exists" });
         }
-        user = await User.findOne({ phoneNo: req.body.phoneNo });
-        if (user) {
+        let userPhone = await User.findOne({ phoneNo: req.body.phoneNo });
+        if (userPhone) {
             return res.status(400).json({ success, error: "Sorry a user with this Phone Number already exists" });
         }
         const salt = await bcrypt.genSalt(10);
@@ -52,12 +52,12 @@ router.post('/createuser', [
         }
         success = true;
         const authToken = jwt.sign(data, jwtSecret)
-        res.json({ success,authToken });
+        return res.json({ success,authToken });
     }
     //Catching the errors
     catch (error) {
         console.log(error.message);
-        res.status(500).send("Internal Server Error");
+        return res.status(500).send("Internal Server Error");
     }
 });
 
@@ -79,12 +79,12 @@ router.post('/login', [
     try {
         let user = await User.findOne({ email });
         if (!user) {
-            res.status(400).json({ error: "Please try to login with correct credentials" });
+            return res.status(400).json({ error: "Please try to login with correct credentials" });
         }
 
         const passwordCompare = await bcrypt.compare(password, user.password);
         if (!passwordCompare) {
-            res.status(400).json({ success, error: "Please try to login with correct credentials" });
+            return res.status(400).json({ success, error: "Please try to login with correct credentials" });
         }
 
         const data = {
@@ -94,11 +94,11 @@ router.post('/login', [
         }
         const authToken = jwt.sign(data, jwtSecret)
         success = true;
-        res.json({ success,authToken });
+        return res.json({ success,authToken });
 
     } catch (error) {
         console.log(error.message);
-        res.status(500).send("Internal Server Error");
+        return res.status(500).send("Internal Server Error");
     }
 })
 
@@ -107,12 +107,12 @@ router.post('/login', [
 router.post('/getuser', fetchuser, async (req, res) => {
 
     try {
-        const userId = req.user.id;
+        const userId = req.user._id;
         const user = await User.findById(userId).select("-password");
-        res.send(user);
+        return res.send(user);
     } catch (error) {
         console.log(error.message);
-        res.status(500).send("Internal Server Error");
+        return res.status(500).send("Internal Server Error");
     }
 
 });

@@ -12,7 +12,7 @@ coverage
 build
 
 # misc
-.env
+.process.env
 .DS_Store
 .env.local
 .env.development.local
