@@ -49,7 +49,7 @@ export const Login = (props) => {
                 <div className="container text-center mt-2">
                 <div className="row">
                 <div className="col-md-12">
-                <button type="submit" className="btn btn-outline-info my-3">Submit</button>
+                <button type="submit" className="btn btn-outline-info my-3">Login</button>
                 </div>
                 </div>
                 <div className="row">
