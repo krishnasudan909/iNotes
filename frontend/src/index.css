@@ -3,12 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  min-width: 100vh;
-  height: 100vh;
-  background: url("./mainbg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+html,body{margin:0;padding:0;}
+
+
 
 

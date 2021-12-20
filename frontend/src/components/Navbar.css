@@ -1,0 +1,11 @@
+.navbarclass{
+    position:absolute;
+    top:0%;
+    left:0%;
+    right:0%;
+}
+@media (min-width:0px) and (max-width:800px){
+    .navbarclass{
+        position: relative;
+    }
+}

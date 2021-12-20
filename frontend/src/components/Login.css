@@ -1,6 +1,14 @@
+h1,p{margin:0 0 1em}
 .Login{
     color: white;
-    margin:auto auto;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    right:0%;
+    background-image: url('./loginBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 .login-form>div{
     width: 30vw;
