@@ -1,4 +1,7 @@
-.Login{color: white;}
+.Login{
+    color: white;
+    margin:auto auto;
+}
 .login-form>div{
     width: 30vw;
     margin-left: auto;
