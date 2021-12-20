@@ -9,8 +9,7 @@ import { SignUp } from './components/SignUp';
 import { Notes } from './components/Notes';
 import {useState} from 'react';
 import { UserDetails } from "./components/UserDetails";
-
-
+import './App.css';
 function App() {
 
   const [alert, setAlert] = useState(null);
@@ -31,7 +30,7 @@ function App() {
         <Router>
           <Navbar />
           <Alert alert={alert}/>
-          <div className="container">
+          <div className="MainContainer container">
             <Switch>
               <Route exact path="/">
                 <Home showAlert={showAlert} />

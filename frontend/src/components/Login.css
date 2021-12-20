@@ -1,0 +1,27 @@
+.Login{color: white;}
+.login-form>div{
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-input{
+    border: 3px solid #5bc0de;
+    background-color: #232323;
+    color:white;
+}
+.login-input::placeholder{
+    color: white;
+}
+.login-input:focus{
+outline: none;
+  box-shadow: none;
+  border: 3px solid orange;
+  background-color: #232323;
+  color: white;
+}
+
+@media (min-width:0px) and (max-width:800px){
+    .login-form>div{
+        width: 50vw;
+    }
+}
