@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link,useHistory } from 'react-router-dom'
-import  './LoginAndSignup.css';
+import  './Login.css';
 
 export const Login = (props) => {
     const [credentials, setCredentials] = useState({email: "", password: ""}) 
@@ -35,19 +35,19 @@ export const Login = (props) => {
     return (
         <>
         <div className="Login">
-        <h2 className="text-center">Login With Existing Account</h2>
+        <h2 className="mt-4 text-center">Login With Existing Account</h2>
         <div className="form-text text-center">We'll never share your credentials with anyone else.</div>
-            <form  onSubmit={handleSubmit} className="mt-3 login-form">
+            <form  onSubmit={handleSubmit} className="mt-3 login-form"style={{paddingLeft:"20%", paddingRight:"20%"}}>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label"><b>Email</b></label>
-                    <input type="email" className="form-control login-input" value={credentials.email} onChange={onChange} id="email" name="email" aria-describedby="emailHelp" placeholder="valid email"  />
+                    <input type="email" className="form-control login-input" value={credentials.email} onChange={onChange} id="email" name="email" aria-describedby="emailHelp" />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label"><b>Password</b></label>
                     <input type="password" className="form-control login-input" value={credentials.password} onChange={onChange} name="password" minLength={6} placeholder="min 6 characters" id="password" />
                     
                 </div>
-                <div className="container text-center">
+                <div className="container text-center mt-2">
                 <div className="row">
                 <div className="col-md-12">
                 <button type="submit" className="btn btn-outline-info my-3">Login</button>
@@ -55,7 +55,7 @@ export const Login = (props) => {
                 </div>
                 <div className="row">
                 <div className="col-md-12">
-                <Link to="/signup" className="mx-2 notregistered">Not registered? Click here</Link>
+                <Link to="/signup" className="mx-2" style={{color:"red"}}>Not registered? Click here</Link>
                 </div>
                 </div>
                 </div>

@@ -4,15 +4,11 @@
   box-sizing: border-box;
 }
 body{
-  min-height: 100vh;
+  min-width: 100vh;
   height: 100vh;
-  background: url("./loginBg.jpg") no-repeat center center fixed;
- -webkit-background-size: cover;
- -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url("./mainbg.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
 }
-
-
 
 

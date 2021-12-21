@@ -1,4 +1,5 @@
 import React from 'react'
+
 export default function Alert(props) {
     const capitalize = (word)=>{
         if(word==="danger"){
@@ -8,7 +9,7 @@ export default function Alert(props) {
         return lower.charAt(0).toUpperCase() + lower.slice(1);
     }
     return (
-        <div className='alertAbsolute' style={{height:"30px"}}>
+        <div  style={{height:'30px'}}>
         {props.alert && <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
             <strong>{capitalize(props.alert.type)}</strong>: {props.alert.msg}
         </div>}
