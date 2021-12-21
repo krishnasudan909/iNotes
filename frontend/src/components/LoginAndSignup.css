@@ -1,0 +1,46 @@
+.Login,.Signup{
+    color: white;
+    margin-top:3rem;
+    margin-bottom: auto;
+    height:100%;
+}
+.login-form>div{
+    width: 30vw;
+    margin: auto;
+}
+.signup-form{
+    padding: 0 20%;
+}
+.login-input,.signup-input{
+    border: 3px solid #5bc0de;
+    background-color: #232323;
+    color:white;
+}
+.login-input::placeholder,.signup-input::placeholder{
+    color: rgba(255, 255, 255, 0.747);
+}
+.login-input:focus,.signup-input:focus{
+outline: none;
+  box-shadow: none;
+  border: 3px solid orange;
+  background-color: #232323;
+  color: white;
+}
+.registered,.notregistered{
+    text-decoration: none;
+    padding-bottom: 5%;
+}
+.notregistered{
+    color:red;
+}
+.registered{
+    color:#299930;
+}
+.registered:hover,.notregistered:hover{
+    color:#5bc0de;
+}
+@media (min-width:0px) and (max-width:800px){
+    .login-form>div{
+        width: 70vw;
+    }
+}
