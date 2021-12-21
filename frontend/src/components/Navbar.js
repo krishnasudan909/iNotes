@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 import {Link,useLocation, useHistory} from "react-router-dom";
-import './Navbar.css'
-
 export const Navbar = () => {
   let location = useLocation();
 let history = useHistory();
@@ -10,35 +8,36 @@ let history = useHistory();
     history.push("/login");
   }
 
+
     return (
       <div className='navbarclass'>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
   <div className="container-fluid">
     <Link className="navbar-brand" to="/">iNotes</Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
     
         <li className="nav-item">
-          <Link className={`nav-link ${location.pathname==="/"?"active": "" }`}   aria-current="page" to="/">Home</Link>
+          <Link className={`nav-link ${location.pathname==="/"?"active": "" }`}   aria-current="page" to="/" data-bs-toggle="collapse" >Home</Link>
         </li>
         <li className="nav-item">
-          <Link className={`nav-link ${location.pathname==="/notes"?"active": "" }`}   to="/notes">Notes</Link>
+          <Link className={`nav-link ${location.pathname==="/notes"?"active": "" }`}    to="/notes">Notes</Link>
         </li>
         <li className="nav-item">
-          <Link className={`nav-link ${location.pathname==="/about"?"active": "" }`}  to="/about">About</Link>
+          <Link className={`nav-link ${location.pathname==="/about"?"active": "" }`}   to="/about"  >About</Link>
         </li>
       </ul>
           
         
       {!localStorage.getItem('token')?<form className="d-flex d-flex justify-content-center">
-      <Link className="btn btn-outline-info mx-1" to="/login" role="button">Login</Link>
-      <Link className="btn btn-outline-info mx-1" to="/signup" role="button">Sign up</Link>
+      <Link className="btn btn-outline-info mx-1" to="/login" role="button"  >Login</Link>
+      <Link className="btn btn-outline-info mx-1" to="/signup" role="button"  >Sign up</Link>
       </form> : <form className="d-flex justify-content-center text-align-center">
-      <Link className={`nav-link ${location.pathname==="/userdetails"?"active": "" }`}  to="/userdetails"><i className="fas fa-user-alt" style={{fontSize:"23px"}}></i></Link>
-      <button className="btn btn-outline-danger mx-1"  onClick={handleLogout}>Logout</button>
+      <Link className={`nav-link ${location.pathname==="/userdetails"?"active": "" }`}  to="/userdetails"  ><i className="fas fa-user-alt" style={{fontSize:"23px"}}></i></Link>
+      <button className="btn btn-outline-danger mx-1"  onClick={handleLogout}  >Logout</button>
       </form>}
     </div>
   </div>
