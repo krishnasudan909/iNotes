@@ -8,7 +8,7 @@ import {Login } from './components/Login';
 import { SignUp } from './components/SignUp';
 import { Notes } from './components/Notes';
 import {useState} from 'react';
-import { UserDetails } from "./components/UserDetails";
+import { EditProfile } from "./components/EditProfile";
 
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
                 <Notes showAlert={showAlert} />
               </Route>
               <Route exact path="/userdetails">
-                <UserDetails showAlert={showAlert} />
+                <EditProfile showAlert={showAlert} />
               </Route>
               <Route exact path="/login">
                 <Login showAlert={showAlert}/>

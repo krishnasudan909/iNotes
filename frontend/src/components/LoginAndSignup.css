@@ -1,0 +1,49 @@
+.login-form>div{
+    width: 30vw;
+    margin: auto;
+}
+.login-input,.signup-input{
+    border: 3px solid #024357;
+    border-radius: 10px;
+}
+.login-input:focus,.signup-input:focus{
+    outline: none;
+    box-shadow: none;
+  border: 3px solid orange;
+}
+.login-btn,.signup-btn {
+    font-weight: bolder;
+    border: 2px solid #024357;
+    border-radius: 10px;
+    color: white;
+}
+.login-btn:hover,.signup-btn:hover {
+    color: #024357;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+    border: 2px solid white;
+}
+.login-btn:focus,.signup-btn:focus{
+    outline: none;
+    box-shadow: none;
+}
+.registered,.notregistered{
+    text-decoration: none;
+    padding-bottom: 5%;
+}
+.notregistered{
+    color:red;
+    font-weight: bolder;
+}
+.registered{
+    color:#1cfc08;
+    font-weight: bolder;
+}
+.registered:hover,.notregistered:hover{
+    color:#024357;
+}
+@media (min-width:0px) and (max-width:800px){
+    .login-form>div{
+        width: 70vw;
+    }
+} 

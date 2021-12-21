@@ -1,0 +1,72 @@
+.heading{
+    font-weight: bolder;
+    text-align: center;
+}
+.modal-content{
+    border:3px solid rgb(252, 115, 115);
+    border-radius: 20px;
+}
+.modal-header{
+    font-weight: bolder;
+    margin: 0;
+    background:linear-gradient(90deg, #adf7f7,white);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.modal-body{
+    background:linear-gradient(135deg, white, #adf7f7);
+}
+.modal-footer{
+    background:linear-gradient(90deg, #adf7f7,white);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.btn-close:focus{
+    outline: none;
+    box-shadow: none;
+}
+.btn-close-footer {
+    font-weight: bolder;
+    border: 2px solid #024357;
+    border-radius: 10px;
+    background: transparent;
+    color: red;
+}
+.btn-close-footer:hover {
+    color: #024357;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+    border: 2px solid red;
+    background: transparent;
+}
+.btn-close-footer:focus{
+    outline: none;
+    box-shadow: none;
+}
+.btn-update {
+    font-weight: bolder;
+    border: 2px solid #024357;
+    border-radius: 10px;
+    background: transparent;
+    color: red;
+}
+.btn-update:hover {
+    color: #024357;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+    border: 2px solid red;
+    background: transparent;
+}
+.btn-update:focus{
+    outline: none;
+    box-shadow: none;
+}
+.details{
+    border: 3px solid #024357;
+    border-radius: 5px;
+}
+.details:focus{
+    outline: none;
+    box-shadow: none;
+  border: 3px solid orange;
+}

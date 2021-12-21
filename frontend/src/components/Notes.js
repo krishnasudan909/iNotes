@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import NoteContext from "../context/notes/NoteContext"
 import { NoteItem } from './NoteItem';
 import { useHistory } from 'react-router-dom';
+import './Notes.css';
 
 export const Notes = (props) => {
     const context = useContext(NoteContext);
@@ -61,23 +62,23 @@ export const Notes = (props) => {
                         <div className="modal-body">
                             <form className="my-3">
                                 <div className="mb-3">
-                                    <label htmlFor="title" className="form-label"><b>Title<b style={{color:"red"}}>*</b></b></label>
-                                    <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" minLength={5} required onChange={onChange} placeholder = "min 5 characters"  />
+                                    <label htmlFor="title" className="form-label"><b>Title</b></label>
+                                    <input type="text" className="details form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" minLength={5} required onChange={onChange} placeholder = "min 5 characters"  />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="tag" className="form-label"><b>Tag</b></label>
-                                    <input type="text" className="form-control" id="etag" name="etag" value={note.etag} onChange={onChange} />
+                                    <input type="text" className="details form-control" id="etag" name="etag" value={note.etag} onChange={onChange} />
                                 </div>
 
                                 <div className="mb-3">
-                                    <label htmlFor="description" className="form-label"><b>Description<b style={{color:"red"}}>*</b></b></label>
-                                    <textarea type="text" className="form-control" id="edescription" name="edescription" value={note.edescription} onChange={onChange} minLength={5} required style={{ height: "100px" }} placeholder = "min 5 characters" ></textarea>
+                                    <label htmlFor="description" className="form-label"><b>Description</b></label>
+                                    <textarea type="text" className="details form-control" id="edescription" name="edescription" value={note.edescription} onChange={onChange} minLength={5} required style={{ height: "100px" }} placeholder = "min 5 characters" ></textarea>
                                 </div>
                             </form>
                         </div>
                         <div className="modal-footer">
-                            <button ref={refCloseAfterEdit} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button disabled={note.etitle.length < 5 || note.edescription.length < 5} onClick={handleClick} type="button" className="btn btn-primary">Update Note</button>
+                            <button ref={refCloseAfterEdit} type="button" className="btn  btn-close-footer" data-bs-dismiss="modal">Close</button>
+                            <button disabled={note.etitle.length < 5 || note.edescription.length < 5} onClick={handleClick} type="button" className="btn btn-update">Update Note</button>
                         </div>
                     </div>
                 </div>
@@ -100,21 +101,21 @@ export const Notes = (props) => {
                             <form className="my-3">
                                 <div className="mb-3">
                                     <label htmlFor="title" className="form-label"><b>Title</b></label>
-                                    <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" disabled />
+                                    <input type="text" className="details form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" disabled />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="tag" className="form-label"><b>Tag</b></label>
-                                    <input type="text" className="form-control" id="etag" name="etag" value={note.etag} disabled />
+                                    <input type="text" className="details form-control" id="etag" name="etag" value={note.etag} disabled />
                                 </div>
 
                                 <div className="mb-3">
                                     <label htmlFor="description" className="form-label"><b>Description</b></label>
-                                    <textarea type="text" className="form-control" id="edescription" name="edescription" value={note.edescription} minLength={5} required disabled style={{ height: "100px" }}></textarea>
+                                    <textarea type="text" className="details form-control" id="edescription" name="edescription" value={note.edescription} minLength={5} required disabled style={{ height: "100px" }}></textarea>
                                 </div>
                             </form>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-close-footer" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -122,7 +123,8 @@ export const Notes = (props) => {
 
             {/* Printing NoteItems */}
             <div className="row mt-4">
-                <h2>Your Notes</h2>
+                <h2 className='heading'>Your Notes </h2>
+                <hr className="container" style={{ height: "3px", color: "black" }} />
                 <div className="container" >
                     {notes.length === 0 && 'No notes to display'}
                 </div>

@@ -1,0 +1,31 @@
+.note-card{
+    border: 3px solid rgb(252, 115, 115);
+    border-radius: 10px;
+    background: linear-gradient(180deg, white, #adf7f7);
+}
+.note-title>b{
+    color:red;
+}
+.note-tag>b{
+    color:#024357;
+}
+.view-note {
+    font-weight: bolder;
+    border: 2px solid #024357;
+    border-radius: 10px;
+    color: blueviolet;
+    font-weight: bold;
+}
+.view-note:hover {
+    color: #024357;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+    border: 2px solid blueviolet;
+}
+.view-note:focus{
+    outline: none;
+    box-shadow: none;
+}
+.fa-edit,.fa-trash-alt{
+    font-size: 1.5em;
+}
