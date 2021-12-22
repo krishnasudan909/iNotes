@@ -1,0 +1,47 @@
+.aboutImage{
+    border: 2px solid orange;
+    width: 300px;
+    height:300px;
+    background: url('./iNotesAboutUs.jpg') no-repeat center center;
+    border-radius: 100%;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color:#024357;
+
+}
+.aboutImage:hover{
+    border: 2px solid #024357;
+    cursor: pointer;
+    color:orange;
+}
+.aboutText{
+    line-height: 2rem;
+    padding:2rem;
+    color: red;
+}
+.anySuggestions{
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+.anySuggestionsText>p>strong{
+    color:blue;
+}
+.fab{
+    color: blue;
+}
+.fab:hover{
+    color:rgb(36, 36, 139);
+    cursor: pointer;
+}
+.linkedinLinks>a{
+    text-decoration: underline;
+    color:black;
+}
+.linkedinLinks>a:hover{
+    color:red;
+    cursor: pointer;
+}

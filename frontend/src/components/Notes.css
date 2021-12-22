@@ -3,7 +3,7 @@
     text-align: center;
 }
 .modal-content{
-    border:3px solid rgb(252, 115, 115);
+    border:2px solid rgb(252, 115, 115);
     border-radius: 20px;
 }
 .modal-header{
@@ -62,11 +62,34 @@
     box-shadow: none;
 }
 .details{
-    border: 3px solid #024357;
-    border-radius: 5px;
+    border: 2px solid orange;
+    border-radius: 10px;
 }
 .details:focus{
     outline: none;
     box-shadow: none;
-  border: 3px solid orange;
+    border: 2px solid #024357;
 }
+
+.dArea::-webkit-scrollbar {
+    width: 15px;
+    border-radius: 10px;
+    background-color: none; }
+  
+.dArea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: orange; 
+}
+
+.displayItem{
+    display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+@media (min-width:0px) and (max-width:800px){
+    .displayItem{
+        flex-direction: column-reverse;
+    }
+} 

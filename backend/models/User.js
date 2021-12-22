@@ -24,6 +24,11 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
+    pic:{
+        type: String,
+        required: true,
+        default:"https://tinyurl.com/noProfileImage"
+    },
     timestamp: {
         type: Date,
         default: Date.now

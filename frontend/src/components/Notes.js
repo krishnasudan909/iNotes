@@ -72,7 +72,7 @@ export const Notes = (props) => {
 
                                 <div className="mb-3">
                                     <label htmlFor="description" className="form-label"><b>Description</b></label>
-                                    <textarea type="text" className="details form-control" id="edescription" name="edescription" value={note.edescription} onChange={onChange} minLength={5} required style={{ height: "100px" }} placeholder = "min 5 characters" ></textarea>
+                                    <textarea type="text" className="details dArea form-control" id="edescription" name="edescription" value={note.edescription} onChange={onChange} minLength={5} required style={{ height: "100px" }} placeholder = "min 5 characters" ></textarea>
                                 </div>
                             </form>
                         </div>
@@ -110,7 +110,7 @@ export const Notes = (props) => {
 
                                 <div className="mb-3">
                                     <label htmlFor="description" className="form-label"><b>Description</b></label>
-                                    <textarea type="text" className="details form-control" id="edescription" name="edescription" value={note.edescription} minLength={5} required disabled style={{ height: "100px" }}></textarea>
+                                    <textarea type="text" className="details dArea form-control" id="edescription" name="edescription" value={note.edescription} minLength={5} required disabled style={{ height: "100px" }}></textarea>
                                 </div>
                             </form>
                         </div>
@@ -122,9 +122,9 @@ export const Notes = (props) => {
             </div>
 
             {/* Printing NoteItems */}
-            <div className="row mt-4">
-                <h2 className='heading'>Your Notes </h2>
-                <hr className="container" style={{ height: "3px", color: "black" }} />
+            <h2 className='heading'>Your Notes </h2>
+            <hr className="container" style={{ height: "3px", color: "black" }} />
+            <div className="row mt-4 displayItem">
                 <div className="container" >
                     {notes.length === 0 && 'No notes to display'}
                 </div>

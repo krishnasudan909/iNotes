@@ -2,14 +2,28 @@
     font-weight: bolder;
 }
 .addnote-input{
-    border:3px solid rgb(252, 115, 115);
+    border:2px solid rgb(252, 115, 115);
     background: linear-gradient(90deg, white, #adf7f7);
     border-radius: 10px;
+}
+.addnote-input:focus{
+    border:2px solid #024357;
 }
 .addnote-input:focus{
     outline: none;
     box-shadow: none;
 }
+.dArea::-webkit-scrollbar {
+    width: 15px;
+    border-radius: 10px;
+    background-color: none; }
+  
+.dArea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: orange; 
+    cursor: pointer;
+}
+
 .addnote-btn {
     font-weight: bolder;
     border: 2px solid #024357;

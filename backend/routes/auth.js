@@ -16,7 +16,7 @@ router.post('/createuser', [
     body('fName', 'Enter a valid First name').isLength({ min: 2 }),
     body('email', 'Enter a valid email').isEmail(),
     body('phoneNo', 'Enter a valid phone no').isNumeric().isLength({min: 10}),
-    body('password', 'Password must be atleat 5 characters').isLength({ min: 5 })
+    body('password', 'Password must be atleat 5 characters').isLength({ min: 6 })
 ], async (req, res) => {
     let success= false;
     //If there are errors return bad request and errors
@@ -102,19 +102,58 @@ router.post('/login', [
     }
 })
 
-// Route 3 : Get Logged In User Details using : POST "/api/auth/getuser" and Login required
+// Route 3 : Get Logged In User Details using : GET "/api/auth/getuser" and Login required
 
-router.post('/getuser', fetchuser, async (req, res) => {
-
+router.get('/getuser', fetchuser, async (req, res) => {
     try {
-        const userId = req.user._id;
+        const userId = req.user.id;
         const user = await User.findById(userId).select("-password");
         return res.send(user);
     } catch (error) {
         console.log(error.message);
-        return res.status(500).send("Internal Server Error");
+        res.status(500).send("Internal Server Error");
     }
+});
 
+//Route 3 update user data using userid PUT "api/user/updateuser"  --login required
+router.put('/updateuser',fetchuser,[
+    body('fName', 'Enter a valid First name').isLength({ min: 2 }),
+    body('email', 'Enter a valid email').isEmail(),
+    body('phoneNo', 'Enter a valid phone no').isNumeric().isLength({min: 10})
+    ],async(req,res)=>{
+    let success= false;
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ success, errors: errors.array() });
+    }
+    const user = await User.findById(req.user.id);
+    if (!user)
+    {
+        return res.status(404).send('User Not Found')
+    }
+    try {
+            user.fName = req.body.fName || user.fName;
+            user.lName = req.body.lName || user.lName;
+            user.email = req.body.email || user.email;
+            user.phoneNo = req.body.phoneNo || user.phoneNo;
+            user.pic = req.body.pic || user.pic;
+            if (req.body.password) {
+                const passCheck = req.body.password;
+                if(passCheck.length>=6){
+                    const salt = await bcrypt.genSalt(10);
+                    const secretPass = await bcrypt.hash(req.body.password, salt);
+                    user.password = secretPass;
+                }
+                else
+                    return res.status(400).send("Password Must be min of 6 characters");
+            }
+            const newUser = await user.save();
+            const updatedUser = await User.findByIdAndUpdate(req.user.id, {$set:newUser}, {new:true});
+            success=true;
+            return res.json({success,updatedUser});
+    } catch (error) {
+        return res.status(500).send('internal server error');
+    }
 });
 
 module.exports = router;

@@ -32,7 +32,7 @@ export const AddNote = (props) => {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="description" className="form-label"><b>Description</b></label>
-                    <textarea type="text" className="addnote-input form-control" id="description" name="description" value={note.description} placeholder = "min 5 characters" onChange={onChange} minLength={5} required style={{height:"100px"}}></textarea>
+                    <textarea type="text" className="addnote-input dArea form-control" id="description" name="description" value={note.description} placeholder = "min 5 characters" onChange={onChange} minLength={5} required style={{height:"100px"}}></textarea>
                 </div>
                 <div className="container text-center">
                 <button disabled={note.title.length<5 || note.description.length<5} type="submit" className="btn addnote-btn btn-lg " onClick={handleClick} >Add Note</button>
