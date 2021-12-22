@@ -107,7 +107,7 @@ export const EditProfile = () => {
                     <b>Profile Picture</b>
                   </label>
                   <br />
-                  <input type="file" accept="image/*" name="image" id="file"   onChange={loadFile} />
+                  <input type="file" accept="image/*" name="image" id="file" onChange={loadFile} />
                 </div>
         </div>
         </div>

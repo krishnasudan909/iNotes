@@ -16,6 +16,7 @@
     border: 2px solid #024357;
     cursor: pointer;
     color:orange;
+    transition: all 0.5s ease-out;
 }
 .aboutText{
     line-height: 2rem;
