@@ -3,7 +3,7 @@ import './EditProfile.css';
 import {useHistory} from "react-router-dom";
 export const EditProfile = (props) => {
   let history = useHistory();
-    const host = "http://localhost:5000";
+  const host = "http://localhost:5000";
 
     const userInitial = {};
     const [user, setUser] = useState(userInitial);

@@ -26,9 +26,12 @@ export const About = () => {
                 </div>
                 <div className='col-md-8 container'>
                     <div className='aboutText'>
-                        <p>• <strong>iNotes</strong> is a website where you will be able to keep all your notes secured and easily accessible, you can access your notes from anywhere and anytime, and, you can edit and delete them in one go.</p>
+                        <p>• <strong>iNotes</strong> is a website where you will be able to keep all your notes secured and easily accessible, you can access your notes from <strong>Anywhere</strong> and <strong>Anytime</strong>. And, you can edit and delete them in one go.</p>
                         <p>
-                            • Also, your notes will not be in the local storage so they will be secure even if you reset your device.
+                            • Also, Your notes will not be in the local storage so they will be secure even if you reset your device.
+                        </p>
+                        <p>
+                            • Feel secure with us because of end to end <strong>encryption</strong>.
                         </p>
                     </div>
                 </div>
