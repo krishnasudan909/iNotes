@@ -177,8 +177,8 @@ const deleteProfileImage=()=>{
               <div className="row">
                 <div className="col-md-12 info">
                   <p><b>*Firstname must be min of 2 characters*</b></p>
-                  <p><b>*Password must be of min 6 characters*</b></p>
                   <p><b>*Email and Phno. must be valid*</b></p>
+                  <p><b>*Password must be of min 6 characters*</b> <b style={{color:"blue"}}>( If filled )</b></p>
                   <p><b>*Lastname is optional*</b></p>
                 </div>
               </div>
@@ -203,10 +203,10 @@ const deleteProfileImage=()=>{
         </div>
                 <div className="col-md-12">
                   <label htmlFor="file" className="form-label" >
-                    <b>Profile Picture</b>
+                    <b>{`${fName} ${lName}`}</b>
                   </label>
                   <br />
-                  <input type="file" accept="image/*" id="file" onChange={(e)=>onChangePic(e.target.files[0])}
+                  <input type="file" accept="image/*" id="file" className="mt-2" onChange={(e)=>onChangePic(e.target.files[0])}
                     required />
                 </div>
         </div>

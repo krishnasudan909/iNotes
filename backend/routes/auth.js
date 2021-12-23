@@ -133,7 +133,7 @@ router.put('/updateuser',fetchuser,[
     }
     try {
             user.fName = req.body.fName || user.fName;
-            user.lName = req.body.lName || user.lName;
+            user.lName = req.body.lName || "";
             user.email = req.body.email || user.email;
             user.phoneNo = req.body.phoneNo || user.phoneNo;
             user.pic = req.body.pic || user.pic;
