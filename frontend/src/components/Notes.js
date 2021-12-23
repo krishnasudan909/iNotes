@@ -124,7 +124,7 @@ export const Notes = (props) => {
             {/* Printing NoteItems */}
             <h2 className='heading'>Your Notes </h2>
             <hr className="container" style={{ height: "3px", color: "black" }} />
-            <div className="row mt-4 displayItem">
+            <div className="row mt-1 displayItem">
                 <div className="container" >
                     {notes.length === 0 && 'No notes to display'}
                 </div>

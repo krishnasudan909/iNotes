@@ -15,8 +15,8 @@ export const About = () => {
     }, [])
     return (
         <>
-        <div className='container'>
-            <h2 className="text-center heading">About <b style={{color:"orange"}}>iNotes</b></h2>
+        <div className='container '>
+            <h2 className="text-center heading">About <b style={{color:"orange", textDecoration:"underline"}}>iNotes</b></h2>
             <hr className="container" style={{ height: "3px", color: "black" }} />
             <div className='row mb-4'>
                 <div className='col-md-4 container d-flex justify-content-center'>
@@ -51,7 +51,7 @@ export const About = () => {
                 </div>
             </div>
             <div className='row container mt-3 mb-4'>
-                <div className='col-md-4 text-center'>
+                <div className='col-md-4 mb-4 text-center'>
                     <div className='linkedinLinks'>
                     <a href="http://www.linkedin.com/in/krishna908" target="_blank" rel="noreferrer" >
                     <i class="fab fa-linkedin-in fa-2x"> </i>
@@ -63,7 +63,7 @@ export const About = () => {
                     </a>
                     </div>
                 </div>
-                <div className='col-md-4 container text-center'>
+                <div className='col-md-4  mb-4 container text-center'>
                     <div className='linkedinLinks'>
                     <a href="http://www.linkedin.com/in/akshad" target="_blank" rel="noreferrer" >
                     <i class="fab fa-linkedin-in fa-2x"> </i>
@@ -75,7 +75,7 @@ export const About = () => {
                     </a>
                     </div>
                 </div>
-                <div className='col-md-4 container text-center'>
+                <div className='col-md-4  mb-4 container text-center'>
                     <div className='linkedinLinks'>
                     <a href="https://www.linkedin.com/in/sanika-salunke-4019661b6" target="_blank" rel="noreferrer" >
                     <i class="fab fa-linkedin-in fa-2x"> </i>

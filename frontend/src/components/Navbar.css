@@ -1,0 +1,74 @@
+.navbar{
+    background-color: rgba(206, 138, 206, 0.747);
+}
+.navbar-brand{
+    font-weight: bolder;
+    color:rgb(226, 0, 0);
+    font-size: 1.5em;
+}
+.navbar-brand:hover{
+    cursor: pointer;
+    color:rgb(160, 11, 11);
+}
+.nav-link{
+    color:#024357;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-link:hover{
+    color:orangered;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.nav-item>.active{
+    color:orangered;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.user-details{
+    color:blue;
+}
+.user-details:hover{
+    color:purple;
+}
+.right-side>.active{
+    color:purple;
+}
+.login-btn-nav,.signup-btn-nav,.logout-btn-nav {
+    font-weight: bolder;
+    border: 2px solid red;
+    border-radius: 10px;
+    color: black;
+    outline: none;
+    box-shadow: none;
+}
+.login-btn-nav:hover,.signup-btn-nav:hover,.logout-btn-nav:hover {
+    color: red;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+    border: 2px solid black;
+}
+.login-btn-nav:focus,.signup-btn-nav:focus,.logout-btn-nav:focus{
+    outline: none;
+    box-shadow: none;
+}
+.blue-text{
+    color: #024357;
+}
+.navbar-toggler{
+    outline: none;
+    box-shadow: none;
+    border:none;
+}
+.navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+    border:none;
+    cursor: pointer;
+}
+.navbar-toggler:hover{
+    outline: none;
+    box-shadow: none;
+    border:none;
+    cursor: pointer;
+}

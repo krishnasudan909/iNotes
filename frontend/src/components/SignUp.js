@@ -35,7 +35,7 @@ export const SignUp = (props) => {
     }
     return (
         <>
-        <h2 className="mt-4 text-center">Create New iNotes Account</h2>
+        <h2 className="mt-2 text-center">Create New iNotes Account</h2>
         <div className="form-text text-center">We'll never share your credentials with anyone else.</div>
        
         <form onSubmit={handleSubmit} style={{paddingLeft:"20%", paddingRight:"20%"}} className="container mt-3">
