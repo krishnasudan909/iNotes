@@ -72,8 +72,11 @@ export const EditProfile = (props) => {
     const json = await response.json()
     console.log(json);
     if (json.success){
+      props.showAlert("Profile Updated Successfully","success");
+      window.location.href="http://localhost:3000/login";
       localStorage.removeItem('token');
-        history.push("/login");
+      history.push("/login");
+      window.location.reload();
     }
 
     else{
