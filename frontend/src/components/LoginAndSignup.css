@@ -36,7 +36,7 @@
     font-weight: bolder;
 }
 .registered{
-    color:#1cfc08;
+    color:blue;
     font-weight: bolder;
 }
 .registered:hover,.notregistered:hover{

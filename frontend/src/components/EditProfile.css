@@ -28,11 +28,20 @@
     margin-top:3%;
 }
 .info>:nth-child(4){
-    color:greenyellow;
+    color:blue;
 }
-.image{
+.profileImage{
     border:3px solid #9b596b;
     border-radius:10px;
     width: 300px;
     height: 300px;
+}
+.edit-input{
+    border:2px solid rgb(252, 115, 115);
+    border-radius: 10px;
+}
+.edit-input:focus{
+    outline: none;
+    box-shadow: none;
+    border: 2px solid #024357;
 }
