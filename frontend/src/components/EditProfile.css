@@ -35,6 +35,9 @@
     border-radius:10px;
     width: 300px;
     height: 300px;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
 .edit-input{
     border:2px solid rgb(252, 115, 115);
@@ -45,3 +48,16 @@
     box-shadow: none;
     border: 2px solid #024357;
 }
+.middleOver{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  
+}
+.hoverThing:hover .profileImage{
+    opacity: 0.5;
+  }
+  
+  .hoverThing:hover .middleOver {
+    opacity: 1;
+  }

@@ -9,10 +9,10 @@ const { body, validationResult } = require('express-validator');
 router.get('/fetchallnotes', fetchuser, async (req,res)=>{
     try{
     const notes = await Notes.find({user: req.user.id});
-    res.json(notes);
+    return res.json(notes);
     } catch(error){
         console.log(error.message);
-        res.status(500).send("Internal Server Error");
+        return res.status(500).send("Internal Server Error");
     }
 });
 
@@ -31,10 +31,10 @@ router.post('/addnote', fetchuser, [
             title,description,tag, user:req.user.id
         });
         const savedNote = await note.save();
-        res.json(savedNote);
+        return res.json(savedNote);
     } catch(error){
         console.log(error.message);
-        res.status(500).send("Internal Server Error");
+        return res.status(500).send("Internal Server Error");
     }
 });
 
@@ -57,10 +57,10 @@ router.put('/updatenote/:id', fetchuser, async (req,res)=>{
         }
 
         note = await Notes.findByIdAndUpdate(req.params.id, {$set: newNote}, {new:true});
-        res.json(note);
+        return res.json(note);
     } catch(error){
         console.log(error.message);
-        res.status(500).send("Internal Server Error");
+        return res.status(500).send("Internal Server Error");
     }
 });
 
@@ -77,10 +77,10 @@ router.delete('/deletenote/:id', fetchuser, async (req,res)=>{
         }
 
         note = await Notes.findByIdAndDelete(req.params.id);
-        res.json({"Success" :"Note has been deleted "});
+        return res.json({"Success" :"Note has been deleted "});
     } catch(error){
         console.log(error.message);
-        res.status(500).send("Internal Server Error");
+        return res.status(500).send("Internal Server Error");
     }
 });
 

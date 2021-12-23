@@ -111,7 +111,7 @@ router.get('/getuser', fetchuser, async (req, res) => {
         return res.send(user);
     } catch (error) {
         console.log(error.message);
-        res.status(500).send("Internal Server Error");
+        return res.status(500).send("Internal Server Error");
     }
 });
 
@@ -124,7 +124,7 @@ router.put('/updateuser',fetchuser,[
     let success= false;
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        return res.status(400).json({ success, errors: errors.array() });
+        return res.status(400).json({ error: errors.array()});
     }
     const user = await User.findById(req.user.id);
     if (!user)

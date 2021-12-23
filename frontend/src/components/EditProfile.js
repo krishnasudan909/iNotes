@@ -3,7 +3,6 @@ import './EditProfile.css';
 import {useHistory} from "react-router-dom";
 export const EditProfile = (props) => {
   let history = useHistory();
-    
     const host = "http://localhost:5000";
 
     const userInitial = {};
@@ -25,7 +24,7 @@ export const EditProfile = (props) => {
       }
     });
     const json = await response.json() ;
-    setUser(json);
+    return setUser(json);
   }
 
   useEffect(() => {
@@ -53,11 +52,10 @@ export const EditProfile = (props) => {
       })
         .then((res) => res.json())
         .then((data) => {
-          setPic(data.url);
-          console.log(pic);
+          return setPic(data.url);
         })
         .catch((err) => {
-          console.log(err);
+          return console.log(err);
         });
   };
 
@@ -74,15 +72,18 @@ export const EditProfile = (props) => {
     const json = await response.json()
     console.log(json);
     if (json.success){
-        // Save the auth token and redirect
-        props.showAlert("User Updated Successfully","success");
-        localStorage.removeItem('auth-token');
+      localStorage.removeItem('token');
         history.push("/login");
     }
+
     else{
         props.showAlert(json.error,"danger");
     }
 }
+const deleteProfileImage=()=>{
+  setPic("https://tinyurl.com/noProfileImage");
+}
+
 
   return (
     <>
@@ -169,7 +170,6 @@ export const EditProfile = (props) => {
                     id="password"
                     value={password}
                     onChange={(e)=>setPassword(e.target.value)}
-                    required
                     minLength={6}
                   />
                 </div>
@@ -193,8 +193,13 @@ export const EditProfile = (props) => {
           
         <div className="col-md-6 text-center">
         <div className="row ">
-        <div className="col-md-12  d-flex align-items-center justify-content-center" >
-        <img  src={pic} alt = {`Profile Image`} className="profileImage" />
+        <div className="col-md-12 d-flex align-items-center justify-content-center hoverThing" >
+          <img  src={pic} alt = "..."className="profileImage" />
+          <div className="middleOver">
+          <i className="far fa-trash-alt fa-3x" style={{color:"red"}} onClick={deleteProfileImage}>
+           </i><br></br>
+          <b style={{color:"black"}}>Delete Profile Image</b>
+          </div>
         </div>
                 <div className="col-md-12">
                   <label htmlFor="file" className="form-label" >

@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './About.css';
 
 export const About = () => {
@@ -50,36 +50,36 @@ export const About = () => {
             <div className='row container mt-3 mb-4'>
                 <div className='col-md-4 text-center'>
                     <div className='linkedinLinks'>
-                    <a href="http://www.linkedin.com/in/krishna908" target="_blank" >
+                    <a href="http://www.linkedin.com/in/krishna908" target="_blank" rel="noreferrer" >
                     <i class="fab fa-linkedin-in fa-2x"> </i>
                     </a>
                     
                     <br></br>
-                    <a href="http://www.linkedin.com/in/krishna908" target="_blank" >
+                    <a href="http://www.linkedin.com/in/krishna908" target="_blank" rel="noreferrer">
                     <b>Krishna Kumar</b>
                     </a>
                     </div>
                 </div>
                 <div className='col-md-4 container text-center'>
                     <div className='linkedinLinks'>
-                    <a href="http://www.linkedin.com/in/akshad" target="_blank" >
+                    <a href="http://www.linkedin.com/in/akshad" target="_blank" rel="noreferrer" >
                     <i class="fab fa-linkedin-in fa-2x"> </i>
                     </a>
                     
                     <br></br>
-                    <a href="http://www.linkedin.com/in/akshad" target="_blank" >
+                    <a href="http://www.linkedin.com/in/akshad" target="_blank" rel="noreferrer">
                     <b>Akshad Modi</b>
                     </a>
                     </div>
                 </div>
                 <div className='col-md-4 container text-center'>
                     <div className='linkedinLinks'>
-                    <a href="https://www.linkedin.com/in/sanika-salunke-4019661b6" target="_blank" >
+                    <a href="https://www.linkedin.com/in/sanika-salunke-4019661b6" target="_blank" rel="noreferrer" >
                     <i class="fab fa-linkedin-in fa-2x"> </i>
                     </a>
                     
                     <br></br>
-                    <a href="https://www.linkedin.com/in/sanika-salunke-4019661b6" target="_blank" >
+                    <a href="https://www.linkedin.com/in/sanika-salunke-4019661b6" target="_blank" rel="noreferrer" >
                     <b>Sanika Salunke</b>
                     </a>
                     </div>
