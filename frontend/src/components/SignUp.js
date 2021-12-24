@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { useHistory,Link } from 'react-router-dom'
+import '../styles/LoginAndSignup.css';
 
 export const SignUp = (props) => {
 

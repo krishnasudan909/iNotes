@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link,useLocation, useHistory} from "react-router-dom";
-import './Navbar.css';
+import '../styles/Navbar.css';
 export const Navbar = () => {
   let location = useLocation();
 let history = useHistory();

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link,useHistory } from 'react-router-dom'
-import './LoginAndSignup.css';
+import '../styles/LoginAndSignup.css';
 
 export const Login = (props) => {
     const [credentials, setCredentials] = useState({email: "", password: ""}) 

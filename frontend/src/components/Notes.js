@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import NoteContext from "../context/notes/NoteContext"
 import { NoteItem } from './NoteItem';
 import { useHistory } from 'react-router-dom';
-import './Notes.css';
+import '../styles/Notes.css';
 
 export const Notes = (props) => {
     const context = useContext(NoteContext);

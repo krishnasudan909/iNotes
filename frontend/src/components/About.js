@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import { useHistory } from 'react-router-dom';
-import './About.css';
+import '../styles/About.css';
 
 export const About = () => {
     let history = useHistory();

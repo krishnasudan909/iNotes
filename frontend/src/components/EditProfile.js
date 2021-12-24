@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from "react";
-import './EditProfile.css';
+import '../styles/EditProfile.css';
 import {useHistory} from "react-router-dom";
 export const EditProfile = (props) => {
   let history = useHistory();
