@@ -14,7 +14,7 @@ export const NoteItem = (props) => {
                     <div className="card-body ">
                         <h5 className="card-title note-title"><b>Title:</b> {note.title}</h5>
                         <p className="card-text note-tag"><b>Tag:</b> {note.tag.length>0 ? note.tag : 'Nothing here'}</p>
-                        <div className="d-flex justify-content-end align-items-center">
+                        <div className="d-flex justify-content-start align-items-start">
                             <i className="far fa-trash-alt " onClick={() => { deleteNote(note._id);
                                 props.showAlert("deleted successfully","success");
                              }}></i>

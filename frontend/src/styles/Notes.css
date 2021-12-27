@@ -83,13 +83,10 @@
 
 .displayItem{
     display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
-
-@media (min-width:0px) and (max-width:800px){
-    .displayItem{
-        flex-direction: column-reverse;
-    }
-} 
+.pdf{
+    border:none;
+}

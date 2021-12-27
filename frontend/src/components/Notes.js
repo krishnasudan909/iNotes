@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import NoteContext from "../context/notes/NoteContext"
 import { NoteItem } from './NoteItem';
 import { useHistory } from 'react-router-dom';
+import { jsPDF } from "jspdf";
+import 'jspdf-autotable';
+
 import '../styles/Notes.css';
 
 export const Notes = (props) => {
@@ -44,6 +47,40 @@ export const Notes = (props) => {
         setNote({ ...note, [e.target.name]: e.target.value });
     }
 
+    const generatePDF = ()=>{
+        let title = note.etitle;
+        let tag = note.etag;
+        if(tag=="")
+            tag="No Tag Provided";
+        let description = note.edescription;
+
+        let doc = new jsPDF();
+        let width = doc.internal.pageSize.getWidth();
+        doc.setFont("Lato-Regular","bold");
+        doc.setFontSize(30);
+        doc.setTextColor("red");
+        doc.text('Your Note - iNotes', width/2, 20, { align: 'center' });
+        doc.setFont("Lato-Regular","normal");
+        doc.setFontSize(20);
+        doc.setTextColor("black");
+        doc.autoTable({
+            margin: { top: 30,bottom:5},
+            body: [
+              ['Title', title],
+              ['Tag', tag],
+              ['Description', description]
+            ],
+          })
+          let time = new Date().toLocaleTimeString();
+          let date = new Date().toLocaleDateString();
+          let both = date+" "+time;
+          doc.setFont("Lato-Regular","normal");
+        doc.setFontSize(10);
+        doc.setTextColor("black");
+        doc.text(both,width-15,doc.lastAutoTable.finalY+5,{align:'right'});
+        let pdfName = title+"_"+date+".pdf";
+        doc.save(pdfName);
+    }
     return (
         <>
             
@@ -98,17 +135,20 @@ export const Notes = (props) => {
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                            <form className="my-3">
-                                <div className="mb-3">
+                        <div className="d-flex justify-content-end align-items-center">
+                            Download PDF&nbsp;&nbsp;<button className="pdf" onClick={generatePDF}><i class="fas fa-file-download fa-2x"></i></button>
+                        </div>
+                            <form className="my-2">
+                                <div className="mb-2">
                                     <label htmlFor="title" className="form-label"><b>Title</b></label>
                                     <input type="text" className="details form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" disabled />
                                 </div>
-                                <div className="mb-3">
+                                <div className="mb-2">
                                     <label htmlFor="tag" className="form-label"><b>Tag</b></label>
                                     <input type="text" className="details form-control" id="etag" name="etag" value={note.etag} disabled />
                                 </div>
 
-                                <div className="mb-3">
+                                <div className="mb-2">
                                     <label htmlFor="description" className="form-label"><b>Description</b></label>
                                     <textarea type="text" className="details dArea form-control" id="edescription" name="edescription" value={note.edescription} minLength={5} required disabled style={{ height: "100px" }}></textarea>
                                 </div>
