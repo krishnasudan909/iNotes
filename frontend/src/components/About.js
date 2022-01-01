@@ -54,7 +54,7 @@ export const About = () => {
                 <div className='col-md-4 mb-4 text-center'>
                     <div className='linkedinLinks'>
                     <a href="http://www.linkedin.com/in/krishna908" target="_blank" rel="noreferrer" >
-                    <i class="fab fa-linkedin-in fa-2x"> </i>
+                    <i className="fab fa-linkedin-in fa-2x"> </i>
                     </a>
                     
                     <br></br>
@@ -66,7 +66,7 @@ export const About = () => {
                 <div className='col-md-4  mb-4 container text-center'>
                     <div className='linkedinLinks'>
                     <a href="http://www.linkedin.com/in/akshad" target="_blank" rel="noreferrer" >
-                    <i class="fab fa-linkedin-in fa-2x"> </i>
+                    <i className="fab fa-linkedin-in fa-2x"> </i>
                     </a>
                     
                     <br></br>
@@ -78,7 +78,7 @@ export const About = () => {
                 <div className='col-md-4  mb-4 container text-center'>
                     <div className='linkedinLinks'>
                     <a href="https://www.linkedin.com/in/sanika-salunke-4019661b6" target="_blank" rel="noreferrer" >
-                    <i class="fab fa-linkedin-in fa-2x"> </i>
+                    <i className="fab fa-linkedin-in fa-2x"> </i>
                     </a>
                     
                     <br></br>

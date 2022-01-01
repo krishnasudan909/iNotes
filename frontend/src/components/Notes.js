@@ -50,7 +50,7 @@ export const Notes = (props) => {
     const generatePDF = ()=>{
         let title = note.etitle;
         let tag = note.etag;
-        if(tag=="")
+        if(tag==="")
             tag="No Tag Provided";
         let description = note.edescription;
 
@@ -136,7 +136,7 @@ export const Notes = (props) => {
                         </div>
                         <div className="modal-body">
                         <div className="d-flex justify-content-end align-items-center">
-                            Download PDF&nbsp;&nbsp;<button className="pdf" onClick={generatePDF}><i class="fas fa-file-download fa-2x"></i></button>
+                            Download PDF&nbsp;&nbsp;<button className="pdf" onClick={generatePDF}><i className="fas fa-file-download fa-2x"></i></button>
                         </div>
                             <form className="my-2">
                                 <div className="mb-2">
