@@ -23,17 +23,20 @@
 
 #Output Screenshots <br/>
 ###### Signup Page
-![image](https://user-images.githubusercontent.com/74672126/175499065-be7807b3-67f2-4fd6-8cec-85fad2679e89.png)
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/74672126/175500323-5e5de554-70c0-49e8-8f83-94dc69bd8108.png">
 
 ###### Login Page
-![image](https://user-images.githubusercontent.com/74672126/175499157-a3056b9c-b8a7-4528-bf36-d967cbd0a9ac.png)
+<img width="959" alt="image" src="https://user-images.githubusercontent.com/74672126/175500253-ad2c233c-bb80-45d0-9f41-be58f916c350.png">
+
+###### Add Note
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/74672126/175500502-11218255-1a5c-4eea-8887-ad93835ed624.png">
 
 ###### View Note
-![image](https://user-images.githubusercontent.com/74672126/175499206-f1194702-ed70-47ef-8a2c-8b78957f664f.png)
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/74672126/175500595-4a62e826-05b8-4441-b58a-8c17a9ef1ad2.png">
 
 ###### Pdf of Downloaded Note
-![image](https://user-images.githubusercontent.com/74672126/175499248-f34a9ad2-8fbe-4f8a-aacc-5f9214d4fe44.png)
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/74672126/175500678-3ccf704d-e9c0-4206-858d-4c2c180ba4de.png">
 
 ###### Profile Page
-![image](https://user-images.githubusercontent.com/74672126/175499287-030df71d-3e01-4ffd-a2d6-94709396ac8b.png)
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/74672126/175500736-5c6cc071-78a8-4d0c-a74b-733cbf149b31.png">
 
