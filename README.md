@@ -19,9 +19,9 @@
 >* Run **cd frontend** and then **npm i**. <br/>
 >* After Going into frontend Run **npm run both**, which will start both frontend and backend. <br/>
 
-##You're all set to use iNotes <br/>
+## You're all set to use iNotes <br/>
 
-#Output Screenshots <br/>
+# Output Screenshots <br/>
 ###### Signup Page
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/74672126/175500323-5e5de554-70c0-49e8-8f83-94dc69bd8108.png">
 
