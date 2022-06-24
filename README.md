@@ -1,23 +1,23 @@
 # iNotes <br/>
 
->A notes taking web site using MERN Stack where Backend is created using **NodeJS & express JS**. <br/>
->**Mongo DB** is used to Store Data.<br/>
->And, Frontend is built using **React JS**.<br/>
->Authentication is Done and passwords are hashed using Salt and pepper method of **bcrypt JS**. <br/>
->Authorization using **JSON Web Token**.<br/>
+>* A notes taking web site using MERN Stack where Backend is created using **NodeJS & express JS**. <br/>
+>* **Mongo DB** is used to Store Data.<br/>
+>* Frontend is built using **React JS**.<br/>
+>* Authentication is Done and passwords are hashed using Salt and pepper method of **bcrypt JS**. <br/>
+>* Authorization using **JSON Web Token**.<br/>
 
 ## How to Run?
 
->Install Node JS in your PC and add it into the enviornment variables path. <br/>
->Install MongoDB and Get a Connection String from it. <br/>
->Download this folder. <br/>
->Open Folder. <br/>
->Run **cd backend** and then **npm i**. <br/>
->Run **cd frontend** and then **npm i**. <br/>
->*These commands will import all the necessary packages* <br/>
->Paste the Copied Connection string in **db.js** in MongoURI Variable like this, **const mongoURI ="mongodb://localhost:27017/inotes?readPreference=primary&appname=MongoDB%20Compass&ssl=false";** <br/>
->Run **cd frontend** and then **npm i**. <br/>
->After Going into frontend Run **npm run both**, which will start both frontend and backend. <br/>
+>* Install Node JS in your PC and add it into the enviornment variables path. <br/>
+>* Install MongoDB and Get a Connection String from it. <br/>
+>* Download this folder. <br/>
+>* Open Folder. <br/>
+>* Run **cd backend** and then **npm i**. <br/>
+>* Run **cd frontend** and then **npm i**. <br/>
+>* *These commands will import all the necessary packages* <br/>
+>* Paste the Copied Connection string in **db.js** in MongoURI Variable like this, **const mongoURI ="mongodb://localhost:27017/inotes?readPreference=primary&appname=MongoDB%20Compass&ssl=false";** <br/>
+>* Run **cd frontend** and then **npm i**. <br/>
+>* After Going into frontend Run **npm run both**, which will start both frontend and backend. <br/>
 
 ##You're all set to use iNotes <br/>
 
