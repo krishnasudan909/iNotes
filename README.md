@@ -21,7 +21,7 @@
 
 ## You're all set to use iNotes <br/>
 
-# Output Screenshots <br/>
+# Screenshots <br/>
 ###### Signup Page
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/74672126/175500323-5e5de554-70c0-49e8-8f83-94dc69bd8108.png">
 
