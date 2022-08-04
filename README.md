@@ -6,6 +6,10 @@
 >* Authentication is Done and passwords are hashed using Salt and pepper method of **bcrypt JS**. <br/>
 >* Authorization using **JSON Web Token**.<br/>
 
+## Working Video
+
+https://user-images.githubusercontent.com/74672126/182878666-02e16e73-1f2f-4fd7-9cce-6863c0fcf5fd.mp4
+
 ## How to Run?
 
 >* Install Node JS in your PC and add it into the enviornment variables path. <br/>
