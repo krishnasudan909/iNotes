@@ -1,4 +1,4 @@
-# iNotes <br/>
+# iNotes - Online Notes Taking Website <br/>
 
 >* A notes taking web site using MERN Stack where Backend is created using **NodeJS & express JS**. <br/>
 >* **Mongo DB** is used to Store Data.<br/>
